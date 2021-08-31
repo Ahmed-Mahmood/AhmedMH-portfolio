@@ -1,0 +1,502 @@
+/* define color variable */
+:root {
+  --rare: #e8f3fd;
+  --primary: #82cbff7a;
+  --secondary: #4775ca;
+  --six: #112446;
+}
+
+/* start reset some styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* end reset some styles */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--rare);
+  overflow-x: hidden;
+}
+
+section {
+  background: var(--primary);
+  box-shadow: 0 0 0.8rem 0 var(--secondary);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+nav,
+.info,
+.btn {
+  text-transform: capitalize;
+}
+
+nav {
+  width: 100%;
+  height: 3rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: var(--secondary);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 0 1.5rem;
+  box-shadow: 0 0 0.5rem 0.1rem var(--six);
+  z-index: 1001;
+}
+
+#logo {
+  font-size: 1.2rem;
+  color: var(--rare);
+}
+
+li {
+  color: var(--rare);
+  display: inline;
+  margin-left: 0.8rem;
+}
+
+/* start styling navigation anchors */
+.nav-link {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: border 0.1s ease;
+}
+
+.active-link {
+  border-bottom: 0.15rem solid var(--rare);
+}
+
+.nav-link:hover {
+  border-bottom: 0.15rem solid var(--rare);
+}
+/* end styling navigation anchors */
+
+/* start styling scroll to top button */
+#go-up {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  border: 0.15rem solid var(--secondary);
+  color: var(--secondary);
+  background: var(--rare);
+}
+/* end styling scroll to top button */
+
+/* hide navigation menu button on large screens */
+#menu-btn {
+  display: none;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#home img {
+  border-radius: 0 0 20rem 0;
+  border: 0.25rem solid var(--secondary);
+  border-top: 0;
+  border-left: 0;
+  box-shadow: 0.15rem 0 0.5rem -0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.home-blocks {
+  padding: 0.8rem 0;
+  width: 85%;
+  margin: 0 auto;
+}
+
+#home #my-main-info .info {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.home-blocks p {
+  color: var(--six);
+  text-align: justify;
+  margin-top: 1rem;
+}
+
+.block-heading {
+  color: var(--secondary);
+  display: inline-block;
+  border-bottom: 0.15rem solid var(--secondary);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.skill {
+  margin-bottom: 0.5rem;
+}
+
+.skill-heading {
+  color: var(--six);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.skill-level {
+  display: grid;
+  grid-template-columns: repeat(10,10%);
+  background: var(--rare);
+  height: 16px;
+}
+
+.range {
+  grid-column: 1/9;
+  display: inline-block;
+  height: 100%;
+  background: var(--secondary);
+}
+
+.skill:first-of-type .range {
+  grid-column: 1/10;
+}
+
+.skill:last-of-type .range {
+  grid-column: 1/8;
+}
+
+.skill-level small {
+  display: block;
+  text-align: right;
+  color: var(--rare);
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+}
+
+ span,
+ #contact-icons i {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#contact-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+#contact-icons i {
+  color: var(--secondary);
+  display: block;
+  width: 2rem;
+  margin: 0.25rem auto;
+  text-align: center;
+}
+
+#contact-spans span {
+  color: var(--six);
+  display: block;
+  margin: 0.25rem auto;
+}
+
+.works {
+  padding: 1.5rem 5%;
+  overflow: hidden;
+  margin: 3rem 0;
+}
+
+.section-heading,
+#logo {
+  font-size: 1.2rem;
+}
+
+.section-heading {
+  color: var(--six);
+  margin: 0.5rem 0;
+  border-bottom: 0.15rem solid var(--secondary);
+}
+
+.work-content {
+  display: grid;
+  grid-template-columns: 60% 30%;
+  grid-template-rows: auto 1fr;
+  grid-gap: 0.8rem 0.8rem;
+  justify-content: center;
+}
+
+.desktop-img {
+  grid-column: 1/ span 2;
+  grid-row: 1/2;
+  width: 100%;
+}
+
+.mob-img {
+  grid-column: 2 /span 1;
+  grid-row: 2/span 1;
+  height: 300px;
+}
+
+.desktop-img,
+.mob-img {
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.5);
+}
+.work-details {
+  color: var(--six);
+  grid-column: 1/2;
+  grid-row: 2/span 1;
+}
+
+.work-details p {
+  margin: 0.8rem 0;
+}
+
+#more-btn {
+  padding: 0.3rem 1.3rem;
+  border-radius: 0.3rem;
+  color: var(--secondary);
+  border: 0.1rem solid var(--secondary);
+  background: var(--rare);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn:focus {
+  border: 0;
+  outline: 0;
+}
+
+/* start styling for active section class */
+section img,
+section span,
+section p,
+section div,
+section h1,
+section button {
+  transform: translateX(-1500px);
+  transition: transform 1s ease;
+}
+
+.active img,
+.active span,
+.active p,
+.active div,
+.active h1,
+.active button {
+  transform: translateX(0);
+}
+/* end styling for active section class */
+
+
+/* start media quries */
+@media (max-width:320px) {
+  #home #my-main-info .info {
+    font-size: 0.8rem;
+  }
+
+  .section-heading,
+  #logo {
+    font-size: 1rem;
+  }
+
+  .work-content {
+    grid-template-columns: 55% 35%;
+    grid-template-rows: 1fr auto;
+  }
+
+  .mob-img {
+    max-height: 250px;
+  }
+
+  .desktop-img,
+  .mob-img {
+    border-radius: 0.5rem;
+  }
+
+  .work-details .feature {
+    display: block;
+    font-size: 0.65rem;
+    line-height: 1;
+  }
+
+  p {
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+
+  #contact-info,
+  span {
+    font-size: 0.8rem;
+  }
+
+  #more-btn {
+    padding: 0.2rem 1rem;
+    border-radius: 0.15rem;
+    border: 0.1rem solid var(--secondary);
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width:500px) {
+  /* styling nav list as menu on mobile screens */
+  #links-list {
+    display: flex;
+    position: fixed;
+    grid-template-rows: repeat(6,50%);
+    top: 3rem;
+    right: 0;
+    flex-wrap: nowrap;
+    width: 10rem;
+    height: 100%;
+    background: var(--secondary);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    transition: transform .5s ease,opacity .5s ease;
+    box-shadow: 0 0.25rem 0.2rem 0.05rem rgba(0, 0, 0, 0.5);
+    z-index: 900;
+  }
+
+  /* show nav list on clicking menu button */
+  #links-list.showed{
+    opacity: 1;
+    transform: rotateX(0);
+  }
+
+  .nav-link{
+    height: 2em;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin: 1.2em auto;
+  }
+
+  /* menu button styling */
+  #menu-btn{
+    display: inline;
+    width: 1.6rem;
+    color: var(--secondary);
+    background: var(--rare);
+    padding: .2rem;
+    border-radius: 0.2rem;
+    border: 0.15rem solid var(--six);
+    box-sizing: content-box;
+    font-size: 1.4rem;
+    text-align: center;
+    transition: color 0.5s ease, background 0.5s ease, border 0.5s ease;
+  }
+
+  #menu-btn:hover{
+    color: var(--rare);
+    background: var(--secondary);
+  }
+}
+
+@media (min-width:570px) {
+  #home {
+    height: calc(100vh - 3rem); /* 3rem for nav height */
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60% 40%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  #home img {
+    align-self: stretch;
+    grid-column: 1 / 2;
+    grid-row: 1/ 2;
+  }
+
+  #my-main-info {
+    grid-column: 2 /span 1;
+    grid-row: 1/2;
+  }
+
+  #pio {
+    grid-column: 2 /span 1;
+    grid-row: 2/3;
+  }
+}
+
+@media (min-width:700px) {
+  .work-content {
+    grid-template-columns: 70% 25%;
+    grid-template-rows: 1fr auto;
+  }
+
+  .desktop-img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+  }
+
+  .mob-img {
+    grid-column: 2 /span 1;
+    grid-row: 1/span 2;
+    height: 400px;
+  }
+
+  .work-details {
+    grid-column: 1/2;
+    grid-row: 2/span 1;
+  }
+}
+
+@media (min-width:800px) {
+  .work-content {
+    grid-template-columns: 75% 20%;
+  }
+  .mob-img {
+    height: 500px;
+  }
+}
+
+@media (min-width:1000px) {
+  main {
+    width: 75%;
+  }
+
+  .mob-img {
+    height: 550px;
+  }
+}
+
+
+
+
