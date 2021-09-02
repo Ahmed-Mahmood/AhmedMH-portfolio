@@ -296,7 +296,7 @@ section p,
 section div,
 section h1,
 section button {
-  transform: translateX(-1500px);
+  transform: translateX(-110%);
   transition: transform 1s ease;
 }
 
